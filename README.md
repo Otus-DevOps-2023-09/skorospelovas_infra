@@ -1,6 +1,18 @@
 # skorospelovas_infra
 skorospelovas Infra repository
 
+ДЗ №5 Сборка образов VM при помощи Packer
+
+создана ветка packer-base
+наработки предыдущего ДЗ перенесены в config-scripts
+установлен Packer
+создан сервисный аккаунт с соответствующими правами
+собран baked-образ с Ruby и MongoDB (reddit-base, конфиг ubuntu16.json)
+из образа вручную создана VM и задеплоено приложение
+произведена параметризация настроек через variables.json
+создан образ с задеплоенным приложением reddit (reddit-full, конфиг immutable.json)
+создан скрипт create_reddit_vm.sh для создания VM с запущенным приложением через Yandex.Cloud CLI
+
 
 ДЗ №4 Деплой тестового приложения
 
