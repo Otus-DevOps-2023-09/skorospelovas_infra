@@ -1,11 +1,11 @@
-#terraform {
-#  required_providers {
-#    yandex = {
-#      source = "yandex-cloud/yandex"
-#    }
-#  }
-#  required_version = ">= 0.13"
-#}
+terraform {
+  required_providers {
+    yandex = {
+      source = "yandex-cloud/yandex"
+    }
+  }
+  required_version = ">= 0.13"
+}
 
 resource "null_resource" "remote-exec-app" {
   connection {
@@ -31,16 +31,3 @@ resource "null_resource" "remote-exec-app" {
   }
 }
 
-#resource "null_resource" "remote-exec-db" {
-#  connection {
-#    type        = "ssh"
-#    host        = var.external_ip_address_db
-#    user        = "ubuntu"
-#    agent       = false
-    # путь до приватного ключа
-#    private_key = file(var.app_private_key_path)
-#  }
-#  provisioner "remote-exec" {
-#    script = "../files/mongo_open_port.sh"
-#  }
-#}
