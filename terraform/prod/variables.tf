@@ -1,6 +1,10 @@
 variable "cloud_id" {
   description = "Cloud"
 }
+variable "token_id" {
+  description = "Token"
+}
+
 variable "folder_id" {
   description = "Folder"
 }
@@ -13,33 +17,37 @@ variable "public_key_path" {
   # Описание переменной
   description = "Path to the public key used for ssh access"
 }
-variable "image_id" {
-  description = "Disk image"
-}
+#variable image_id {
+# description = "Disk image"
+#}
 variable "subnet_id" {
   description = "Subnet"
 }
 variable "service_account_key_file" {
-  description = "key.json"
+  description = "key .json"
 }
 variable "private_key_path" {
-  # Описание переменной
-  description = "Path to the private key used for ssh access"
+  description = "Path to private key"
 }
-variable "reddit_app_count" {
-  default = 1
+variable "vm_count" {
+  description = "VM instance count"
+  type        = number
+  default     = 1
 }
-variable app_disk_image {
+variable "app_disk_image" {
   description = "Disk image for reddit app"
-  default = "reddit-base"
+  default     = "reddit-app-base"
 }
-variable db_disk_image {
-  description = "Disk image for reddit db"
-  default = "reddit-db"
+variable "db_disk_image" {
+  description = "Disk image for redddit base"
+  default     = "reddit-db-base"
 }
-variable "environment" {
-  description = "Environment name"
+variable "access_key" {
+  description = "s3 bucket access key"
 }
-variable "terraform_backend_s3_bucket" {
-  description = "S3 bucket for terraform backend"
+variable "secret_key" {
+  description = "s3 bucket secret key"
+}
+variable "db_url" {
+  description = "db IP"
 }
