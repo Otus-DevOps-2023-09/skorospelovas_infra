@@ -1,9 +1,10 @@
-cloud_id  = ""
-folder_id = ""
-zone = "ru-central1-a"
+cloud_id                 = ""
+folder_id                = ""
+zone                     = "ru-central1-a"
 image_id                 = ""
 public_key_path          = "~/.ssh/id-rsa.pub"
 subnet_id                = ""
 service_account_key_file = "key.json"
 private_key_path         = "~/.ssh/id_rsa"
 reddit_app_count         = 2
+ssh_user                 = "appuser"

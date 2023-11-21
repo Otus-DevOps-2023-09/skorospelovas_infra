@@ -1,8 +1,8 @@
-variable "service_account_key_file" {
-  description = "key.json"
-}
 variable "cloud_id" {
   description = "Cloud"
+}
+variable "token_id" {
+  description = "Token"
 }
 variable "folder_id" {
   description = "Folder"
@@ -12,24 +12,33 @@ variable "zone" {
   # Значение по умолчанию
   default = "ru-central1-a"
 }
-variable "service_account_id" {
-  description = "Service account id"
-  type        = string
+variable "public_key_path" {
+  # Описание переменной
+  description = "Path to the public key used for ssh access"
 }
-variable "buckets" {
-  description = "List of buckets params"
-  type = map(object({
-    access_key = string
-    secret_key = string
-  }))
-  default = {
-    "stage" = {
-      access_key = "stage_access_key"
-      secret_key = "stage_secret_key"
-    }
-    "prod" = {
-      access_key = "prod_access_key"
-      secret_key = "prod_secret_key"
-    }
-  }
+variable "subnet_id" {
+  description = "Subnet"
+}
+variable "service_account_key_file" {
+  description = "key .json"
+}
+variable "private_key_path" {
+  description = "Path to private key"
+}
+variable "vm_count" {
+  description = "VM instance count"
+  type        = number
+  default     = 1
+}
+variable "app_disk_image" {
+  description = "Disk image for reddit app"
+  default     = "reddit-app-base"
+}
+variable "db_disk_image" {
+  description = "Disk image for redddit base"
+  default     = "reddit-db-base"
+}
+variable "ssh_user" {
+  description = "ssh user"
+  default     = "appuser"
 }
