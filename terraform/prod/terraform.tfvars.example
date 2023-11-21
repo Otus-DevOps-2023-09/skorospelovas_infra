@@ -1,0 +1,13 @@
+cloud_id                 = ""
+folder_id                = ""
+zone                     = "ru-central1-a"
+image_id                 = ""
+public_key_path          = "~/.ssh/id_rsa.pub"
+subnet_id                = ""
+service_account_key_file = "key.json"
+private_key_path         = "~/.ssh/id_rsa"
+reddit_app_count         = 1
+app_disk_image           = ""
+db_disk_image            = ""
+environment = "prod"
+terraform_backend_s3_bucket = "stage-"

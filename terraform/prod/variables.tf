@@ -26,27 +26,20 @@ variable "private_key_path" {
   # Описание переменной
   description = "Path to the private key used for ssh access"
 }
-variable "service_account_key_file" {
-  description = "key.json"
+variable "reddit_app_count" {
+  default = 1
 }
-variable "service_account_id" {
-  description = "Service account id"
-  type        = string
+variable app_disk_image {
+  description = "Disk image for reddit app"
+  default = "reddit-base"
 }
-variable "buckets" {
-  description = "List of buckets params"
-  type = map(object({
-    access_key = string
-    secret_key = string
-  }))
-  default = {
-    "stage" = {
-      access_key = "stage_access_key"
-      secret_key = "stage_secret_key"
-    }
-    "prod" = {
-      access_key = "prod_access_key"
-      secret_key = "prod_secret_key"
-    }
-  }
+variable db_disk_image {
+  description = "Disk image for reddit db"
+  default = "reddit-db"
+}
+variable "environment" {
+  description = "Environment name"
+}
+variable "terraform_backend_s3_bucket" {
+  description = "S3 bucket for terraform backend"
 }
