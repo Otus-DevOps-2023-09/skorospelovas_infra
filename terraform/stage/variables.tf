@@ -4,7 +4,6 @@ variable "cloud_id" {
 variable "token_id" {
   description = "Token"
 }
-
 variable "folder_id" {
   description = "Folder"
 }
@@ -17,9 +16,6 @@ variable "public_key_path" {
   # Описание переменной
   description = "Path to the public key used for ssh access"
 }
-#variable image_id {
-# description = "Disk image"
-#}
 variable "subnet_id" {
   description = "Subnet"
 }
@@ -42,12 +38,7 @@ variable "db_disk_image" {
   description = "Disk image for redddit base"
   default     = "reddit-db-base"
 }
-variable "access_key" {
-  description = "s3 bucket access key"
-}
-variable "secret_key" {
-  description = "s3 bucket secret key"
-}
-variable "bucket_name" {
-  description = "s3 bucket name"
+variable "ssh_user" {
+  description = "ssh user"
+  default     = "appuser"
 }
