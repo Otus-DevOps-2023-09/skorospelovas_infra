@@ -42,6 +42,6 @@ resource "yandex_compute_instance" "db" {
 #    script = "${path.module}/deploy.sh"
 #  }
   metadata = {
-    ssh-keys = "ubuntu:${file("~/.ssh/id_rsa.pub")}"
+    ssh-keys = "ubuntu:${file(var.public_key_path)}"
   }
 }

@@ -5,8 +5,8 @@
 #      version = "~>0.35"
 #    }
 #  }
-  required_version = ">= 0.13"
-}
+#  required_version = ">= 0.13"
+#}
 provider "yandex" {
   token     = var.token_id
   cloud_id  = var.cloud_id
