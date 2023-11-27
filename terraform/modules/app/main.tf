@@ -21,24 +21,24 @@ resource "yandex_compute_instance" "app" {
   scheduling_policy {
     preemptible = "true"
   }
-  connection {
-  type    = "ssh"
-  host    = self.network_interface.0.nat_ip_address
-  user    = "ubuntu"
-  private_key = file(var.private_key_path)
-}
-provisioner file {
-  content     = templatefile("${path.module}/puma.service", { user = var.ssh_user, db_url = var.db_url})
-  destination = "/tmp/puma.service"
-}
+#  connection {
+#  type    = "ssh"
+#  host    = self.network_interface.0.nat_ip_address
+#  user    = "ubuntu"
+#  private_key = file("~/.ssh/id_rsa")
+#}
+#provisioner file {
+#  content     = templatefile("${path.module}/puma.service", { user = var.ssh_user, db_url = var.db_url})
+#  destination = "/tmp/puma.service"
+#}
 
-provisioner "remote-exec" {
-  script = "${path.module}/deploy.sh"
-}
+#provisioner "remote-exec" {
+#  script = "${path.module}/deploy.sh"
+#}
 
   boot_disk {
     initialize_params {
-      image_id = var.app_disk_image
+      image_id = "fd8qju5jfpg5gsq0bfu4"
     }
   }
 
