@@ -1,7 +1,7 @@
 ---
 
 - name: Add MongoDB to image
-  hosts: db
+  hosts: all
   become: true
   tasks:
     - name: Update apt cache & install mongo

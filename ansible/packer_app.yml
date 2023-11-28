@@ -1,6 +1,6 @@
 ---
 - name: Install Ruby & Bundler
-  hosts: app
+  hosts: all
   become: true
   tasks:
     - name: Update Apt cache & install packages for app
