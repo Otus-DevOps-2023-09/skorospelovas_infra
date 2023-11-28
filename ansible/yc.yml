@@ -1,3 +1,4 @@
+---
 plugin: community.general.yc_compute
 auth_kind: "serviceaccountfile"
 service_account_file: "/home/alex/key.json"
@@ -11,3 +12,4 @@ keyed_groups:
     - key: labels['group']
       prefix: ''
       separator: ''
+      
