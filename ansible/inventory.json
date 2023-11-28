@@ -1,26 +1,18 @@
 {
-    "all": {
-        "hosts": {
-            "appserver": {
-                "ansible_host": "158.160.125.182"
-            },
-            "dbserver": {
-                "ansible_host": "158.160.122.22"
-            }
-        }
-    },
     "app": {
-        "hosts": {
-            "appserver": {
-                "ansible_host": "158.160.125.182"
-            }
-        }
+      "hosts": [
+        "158.160.125.182"],
+      "vars": {
+        "var1": "foo",
+        "var2": "bar"
+      }
     },
     "db": {
-        "hosts": {
-            "dbserver": {
-                "ansible_host": "158.160.122.22"
-            }
-        }
+      "hosts": [
+        "158.160.122.22"],
+      "vars": {
+        "var1": "foobar",
+        "var2": "barfoo"
+      }
     }
-}
+  }
