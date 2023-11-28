@@ -1,6 +1,10 @@
 # skorospelovas_infra
 skorospelovas Infra repository
 
+ДЗ №9 Продолжение знакомства с Ansible: templates, handlers, dynamic inventory, vault, tags
+
+------
+
 ДЗ №8 Управление конфигурацией. Знакомство с Ansible 
 
 При удалении папки ~/reddit и повторного выполнения плейбука менятся флаг changed и становиться равным 1

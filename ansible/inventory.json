@@ -2,24 +2,24 @@
     "all": {
         "hosts": {
             "appserver": {
-                "ansible_host": "158.160.40.72"
+                "ansible_host": "158.160.125.182"
             },
             "dbserver": {
-                "ansible_host": "158.160.41.22"
+                "ansible_host": "158.160.122.22"
             }
         }
     },
     "app": {
         "hosts": {
             "appserver": {
-                "ansible_host": "158.160.40.72"
+                "ansible_host": "158.160.125.182"
             }
         }
     },
     "db": {
         "hosts": {
             "dbserver": {
-                "ansible_host": "158.160.41.22"
+                "ansible_host": "158.160.122.22"
             }
         }
     }
