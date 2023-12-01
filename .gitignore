@@ -1,7 +1,7 @@
 /packer/variables.json
 /packer/key.json
 /terraform/key.json
-
+/terraform/terraform.tfvars
 
 *.tfstate
 *.tfstate.*.backup
@@ -10,3 +10,5 @@
 .terraform/
 
 *.retry
+
+jdauphant.nginx
