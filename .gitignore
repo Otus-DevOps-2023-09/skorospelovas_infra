@@ -2,13 +2,10 @@
 /packer/key.json
 /terraform/key.json
 /terraform/terraform.tfvars
-
 *.tfstate
 *.tfstate.*.backup
 *.tfstate.backup
 *.tfvars
 .terraform/
-
 *.retry
-
 jdauphant.nginx
