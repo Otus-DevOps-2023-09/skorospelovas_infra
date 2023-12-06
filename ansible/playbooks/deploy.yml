@@ -4,7 +4,6 @@
   hosts: app
   tags: deploy-tag
   become: true
-   
   tasks:
     - name: Fetch the latest version of application code
       git:
@@ -17,7 +16,6 @@
       bundler:
         state: present
         chdir: /home/ubuntu/reddit
-  
   handlers:
   - name: restart puma
     systemd: name=puma state=restarted
